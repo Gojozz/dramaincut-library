@@ -410,6 +410,16 @@
       "size": 60544,
       "license": "Public Domain",
       "attribution": null
+    },
+    {
+      "id": "achafita-mvs64di7",
+      "category": "font",
+      "title": "Achafita",
+      "file": "fonts\/Achafita.ttf",
+      "url": "https:\/\/cdn.jsdelivr.net\/gh\/Gojozz\/dramaincut-library@main\/fonts\/Achafita.ttf",
+      "size": 61676,
+      "license": "Public Domain",
+      "attribution": null
     }
   ]
 }
