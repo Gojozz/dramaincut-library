@@ -440,6 +440,16 @@
       "size": 59760,
       "license": "Public Domain",
       "attribution": null
+    },
+    {
+      "id": "achafont-mvs681c0",
+      "category": "font",
+      "title": "Achafont",
+      "file": "fonts\/Achafout.ttf",
+      "url": "https:\/\/cdn.jsdelivr.net\/gh\/Gojozz\/dramaincut-library@main\/fonts\/Achafout.ttf",
+      "size": 118260,
+      "license": "Public Domain",
+      "attribution": null
     }
   ]
 }
