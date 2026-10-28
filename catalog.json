@@ -430,6 +430,16 @@
       "size": 61016,
       "license": "Public Domain",
       "attribution": null
+    },
+    {
+      "id": "achafont-mvs67iza",
+      "category": "font",
+      "title": "Achafont",
+      "file": "fonts\/Achafont.ttf",
+      "url": "https:\/\/cdn.jsdelivr.net\/gh\/Gojozz\/dramaincut-library@main\/fonts\/Achafont.ttf",
+      "size": 59760,
+      "license": "Public Domain",
+      "attribution": null
     }
   ]
 }
