@@ -420,6 +420,16 @@
       "size": 61676,
       "license": "Public Domain",
       "attribution": null
+    },
+    {
+      "id": "achaflft-mvs65pdo",
+      "category": "font",
+      "title": "Achaflft",
+      "file": "fonts\/Achaflft.ttf",
+      "url": "https:\/\/cdn.jsdelivr.net\/gh\/Gojozz\/dramaincut-library@main\/fonts\/Achaflft.ttf",
+      "size": 61016,
+      "license": "Public Domain",
+      "attribution": null
     }
   ]
 }
