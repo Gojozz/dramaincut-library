@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "sfx-applause",
+      "category": "sfx",
+      "title": "Tepuk tangan akhir pertunjukan",
+      "file": "sfx/Fireworks_end_of_act_applause.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/Fireworks_end_of_act_applause.ogg",
+      "size": 1438207,
+      "license": "Public Domain",
+      "attribution": null
+    },
+    {
+      "id": "sfx-beep",
+      "category": "sfx",
+      "title": "Beep UI",
+      "file": "sfx/NEC_PC-9801VX_ITF_beep_sound.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/NEC_PC-9801VX_ITF_beep_sound.ogg",
+      "size": 11729,
+      "license": "CC0 1.0",
+      "attribution": null
+    },
+    {
+      "id": "sfx-rain-thunder",
+      "category": "sfx",
+      "title": "Hujan dan guntur",
+      "file": "sfx/Rain_and_thunder.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/Rain_and_thunder.ogg",
+      "size": 226945,
+      "license": "Public Domain",
+      "attribution": null
+    },
+    {
+      "id": "sfx-thunder",
+      "category": "sfx",
+      "title": "Guntur",
+      "file": "sfx/Thunder.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/Thunder.ogg",
+      "size": 143493,
+      "license": "CC BY 3.0",
+      "attribution": "Bidgee"
+    },
+    {
+      "id": "sfx-rain-thunder-birds",
+      "category": "sfx",
+      "title": "Hujan, guntur, dan burung",
+      "file": "sfx/Rainthunderandbirds.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/Rainthunderandbirds.ogg",
+      "size": 4021953,
+      "license": "Public Domain",
+      "attribution": null
+    },
+    {
+      "id": "sfx-thunder-steps",
+      "category": "sfx",
+      "title": "Guntur dan langkah",
+      "file": "sfx/Getting_set_to_record_thunder.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/Getting_set_to_record_thunder.ogg",
+      "size": 563200,
+      "license": "Public Domain",
+      "attribution": null
+    },
+    {
+      "id": "sfx-rain-thunder-birds-long",
+      "category": "sfx",
+      "title": "Hujan, guntur, dan burung (panjang)",
+      "file": "sfx/Rain_thunder_and_birds.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/Rain_thunder_and_birds.ogg",
+      "size": 1979069,
+      "license": "Public Domain",
+      "attribution": null
+    },
+    {
+      "id": "sfx-squeaky-door",
+      "category": "sfx",
+      "title": "Pintu berderit",
+      "file": "sfx/Squeaky_door.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/Squeaky_door.ogg",
+      "size": 96166,
+      "license": "Public Domain",
+      "attribution": null
+    },
+    {
+      "id": "sfx-elevator-door",
+      "category": "sfx",
+      "title": "Pintu lift menutup",
+      "file": "sfx/Elevator_door_closing.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/Elevator_door_closing.ogg",
+      "size": 235530,
+      "license": "Public Domain",
+      "attribution": null
+    },
+    {
+      "id": "sfx-bottle-pop",
+      "category": "sfx",
+      "title": "Pop botol",
+      "file": "sfx/Ketchup_bottle_opening_and_closing_screw_top.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/sfx/Ketchup_bottle_opening_and_closing_screw_top.ogg",
+      "size": 408817,
+      "license": "Public Domain",
+      "attribution": null
+    },
+    {
+      "id": "music-cannery",
+      "category": "music",
+      "title": "The Cannery",
+      "file": "music/The Cannery.mp3",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/The%20Cannery.mp3",
+      "size": 7283056,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-deuces",
+      "category": "music",
+      "title": "Deuces",
+      "file": "music/Deuces.mp3",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Deuces.mp3",
+      "size": 6107790,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-modern-piano-rushed",
+      "category": "music",
+      "title": "Modern Piano Gamma - Rushed",
+      "file": "music/Modern Piano Gamma - Rushed.mp3",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Modern%20Piano%20Gamma%20-%20Rushed.mp3",
+      "size": 4281222,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-airship-serenity",
+      "category": "music",
+      "title": "Airship Serenity",
+      "file": "music/Airship Serenity.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Airship%20Serenity.ogg",
+      "size": 2538321,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-almost-in-f",
+      "category": "music",
+      "title": "Almost in F",
+      "file": "music/Almost in F.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Almost%20in%20F.ogg",
+      "size": 19208280,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-at-rest",
+      "category": "music",
+      "title": "At Rest",
+      "file": "music/At Rest.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/At%20Rest.ogg",
+      "size": 2214509,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-adventure-meme",
+      "category": "music",
+      "title": "Adventure Meme",
+      "file": "music/Adventure Meme.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Adventure%20Meme.ogg",
+      "size": 1037361,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-arcadia",
+      "category": "music",
+      "title": "Arcadia",
+      "file": "music/Arcadia.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Arcadia.ogg",
+      "size": 1095486,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-action",
+      "category": "music",
+      "title": "Action",
+      "file": "music/Action.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Action.ogg",
+      "size": 1873706,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-airport-lounge",
+      "category": "music",
+      "title": "Airport Lounge",
+      "file": "music/Airport Lounge.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Airport%20Lounge.ogg",
+      "size": 3622333,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-americana",
+      "category": "music",
+      "title": "Americana",
+      "file": "music/Americana.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Americana.ogg",
+      "size": 2131266,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-angevin",
+      "category": "music",
+      "title": "Angevin",
+      "file": "music/Angevin.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Angevin.ogg",
+      "size": 3129154,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-8bit-dungeon-boss",
+      "category": "music",
+      "title": "8bit Dungeon Boss",
+      "file": "music/8bit Dungeon Boss.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/8bit%20Dungeon%20Boss.ogg",
+      "size": 2447450,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-amazing-grace-2011",
+      "category": "music",
+      "title": "Amazing Grace 2011",
+      "file": "music/Amazing Grace 2011.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Amazing%20Grace%202011.ogg",
+      "size": 1895955,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "music-anguish",
+      "category": "music",
+      "title": "Anguish",
+      "file": "music/Anguish.ogg",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/music/Anguish.ogg",
+      "size": 2542370,
+      "license": "CC BY",
+      "attribution": "Kevin MacLeod"
+    },
+    {
+      "id": "font-montserrat",
+      "category": "font",
+      "title": "Montserrat",
+      "file": "fonts/Montserrat.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Montserrat.ttf",
+      "size": 744936,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-poppins",
+      "category": "font",
+      "title": "Poppins",
+      "file": "fonts/Poppins.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Poppins.ttf",
+      "size": 160316,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-open-sans",
+      "category": "font",
+      "title": "Open Sans",
+      "file": "fonts/Open Sans.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Open%20Sans.ttf",
+      "size": 532636,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-lato",
+      "category": "font",
+      "title": "Lato",
+      "file": "fonts/Lato.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Lato.ttf",
+      "size": 656568,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-inter",
+      "category": "font",
+      "title": "Inter",
+      "file": "fonts/Inter.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Inter.ttf",
+      "size": 876576,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-raleway",
+      "category": "font",
+      "title": "Raleway",
+      "file": "fonts/Raleway.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Raleway.ttf",
+      "size": 312352,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-playfair-display",
+      "category": "font",
+      "title": "Playfair Display",
+      "file": "fonts/Playfair Display.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Playfair%20Display.ttf",
+      "size": 300724,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-merriweather",
+      "category": "font",
+      "title": "Merriweather",
+      "file": "fonts/Merriweather.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Merriweather.ttf",
+      "size": 4628080,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-lora",
+      "category": "font",
+      "title": "Lora",
+      "file": "fonts/Lora.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Lora.ttf",
+      "size": 212196,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-bebas-neue",
+      "category": "font",
+      "title": "Bebas Neue",
+      "file": "fonts/Bebas Neue.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Bebas%20Neue.ttf",
+      "size": 61400,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-oswald",
+      "category": "font",
+      "title": "Oswald",
+      "file": "fonts/Oswald.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Oswald.ttf",
+      "size": 172088,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-pacifico",
+      "category": "font",
+      "title": "Pacifico",
+      "file": "fonts/Pacifico.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Pacifico.ttf",
+      "size": 329380,
+      "license": "OFL",
+      "attribution": null
+    },
+    {
+      "id": "font-dancing-script",
+      "category": "font",
+      "title": "Dancing Script",
+      "file": "fonts/Dancing Script.ttf",
+      "url": "https://cdn.jsdelivr.net/gh/Gojozz/dramaincut-library@main/fonts/Dancing%20Script.ttf",
+      "size": 133636,
+      "license": "OFL",
+      "attribution": null
+    }
+  ]
+}
