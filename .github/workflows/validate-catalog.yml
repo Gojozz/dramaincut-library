@@ -1,0 +1,30 @@
+---
+name: Validate catalog
+on:
+  push:
+    branches: [main]
+    paths: ['catalog.json', 'sfx/**', 'music/**', 'fonts/**']
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check catalog.json consistency
+        run: |
+          python3 - << 'PY'
+          import json, os, sys
+          cat = json.load(open('catalog.json'))
+          seen = set()
+          bad = []
+          for it in cat['items']:
+              if it['id'] in seen:
+                  bad.append('duplikat id: ' + it['id'])
+              seen.add(it['id'])
+              if not os.path.exists(it['file']):
+                  bad.append('file tidak ada: ' + it['file'] + ' (id ' + it['id'] + ')')
+              if it['license'].startswith('CC BY') and not it.get('attribution'):
+                  bad.append('CC BY tanpa atribusi: ' + it['id'])
+          if bad:
+              print('\n'.join(bad)); sys.exit(1)
+          print(f"OK: {len(cat['items'])} entri katalog, semua file ada.")
+          PY
