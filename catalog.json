@@ -400,6 +400,16 @@
       "size": 3796741,
       "license": "Public Domain",
       "attribution": null
+    },
+    {
+      "id": "achafexp-mvs5fkoy",
+      "category": "font",
+      "title": "Achafexp",
+      "file": "fonts\/Achafexp.ttf",
+      "url": "https:\/\/cdn.jsdelivr.net\/gh\/Gojozz\/dramaincut-library@main\/fonts\/Achafexp.ttf",
+      "size": 60544,
+      "license": "Public Domain",
+      "attribution": null
     }
   ]
 }
