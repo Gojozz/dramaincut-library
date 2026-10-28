@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tambah Pustaka DramainCut</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:640px;margin:24px auto;padding:0 16px;line-height:1.5}
+  label{display:block;margin-top:14px;font-weight:600}
+  input,select,button{width:100%;padding:10px;margin-top:4px;font-size:16px;box-sizing:border-box}
+  button{background:#0969da;color:#fff;border:0;border-radius:6px;cursor:pointer;margin-top:18px}
+  button:disabled{opacity:.5}
+  #log{white-space:pre-wrap;background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;padding:12px;margin-top:18px}
+  .hint{color:#57606a;font-size:14px}
+  details{margin-top:14px}
+</style>
+</head>
+<body>
+<h1>Tambah Pustaka DramainCut</h1>
+<p class="hint">Halaman ini mengunggah file ke repo <b>Gojozz/dramaincut-library</b> dan menambahkan entrinya ke <b>catalog.json</b>, sehingga item langsung muncul di aplikasi tanpa update APK. Token hanya tersimpan di perangkat ini dan hanya dikirim ke api.github.com.</p>
+
+<label>Token GitHub (fine-grained, repo ini saja)
+  <input id="token" type="password" placeholder="github_pat_..." autocomplete="off">
+</label>
+<button id="forgetToken" type="button">Hapus token tersimpan</button>
+<details>
+  <summary><b>Cara membuat token</b></summary>
+  <ol>
+    <li>Buka <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener">github.com/settings/tokens?type=beta</a> → Generate new token.</li>
+    <li>Repository access: <b>Only select repositories</b> → pilih <b>dramaincut-library</b> saja.</li>
+    <li>Permissions → Repository permissions → <b>Contents: Read and write</b>. Yang lain biarkan kosong.</li>
+    <li>Generate, salin tokennya, tempel di kolom atas, lalu tekan Simpan Token.</li>
+  </ol>
+</details>
+<button id="saveToken" type="button">Simpan Token</button>
+
+<label>File
+  <input id="file" type="file">
+</label>
+<label>Kategori
+  <select id="category">
+    <option value="sfx">SFX</option>
+    <option value="music">Musik latar</option>
+    <option value="font">Font</option>
+  </select>
+</label>
+<label>Judul tampil di aplikasi
+  <input id="title" type="text" placeholder="mis. Guntur jauh">
+</label>
+<label>Lisensi
+  <select id="license">
+    <option>Public Domain</option>
+    <option>CC0 1.0</option>
+    <option>CC BY</option>
+    <option>CC BY 3.0</option>
+    <option>OFL</option>
+  </select>
+</label>
+<label>Atribusi (wajib bila lisensi CC BY — mis. nama pencipta)
+  <input id="attr" type="text" placeholder="mis. Kevin MacLeod">
+</label>
+<button id="uploadBtn" type="button">Unggah &amp; Tambah ke Katalog</button>
+<div id="log">Siap.</div>
+
+<script>
+const OWNER = 'Gojozz', REPO = 'dramaincut-library', BRANCH = 'main';
+const $ = id => document.getElementById(id);
+const log = m => { $('log').textContent += '\n' + m; };
+const folderOf = c => c === 'sfx' ? 'sfx' : c === 'music' ? 'music' : 'fonts';
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'item';
+const tokenKey = 'dramaincut-library-token';
+if (localStorage.getItem(tokenKey)) $('token').value = localStorage.getItem(tokenKey);
+$('saveToken').onclick = () => { localStorage.setItem(tokenKey, $('token').value.trim()); log('Token disimpan di perangkat ini.'); };
+$('forgetToken').onclick = () => { localStorage.removeItem(tokenKey); $('token').value = ''; log('Token dihapus.'); };
+
+async function api(path, method, token, body) {
+  const r = await fetch('https://api.github.com' + path, {
+    method, headers: { 'Accept': 'application/vnd.github+json', 'Authorization': 'Bearer ' + token },
+    body: body ? JSON.stringify(body) : undefined });
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error((data && data.message) || ('GitHub error ' + r.status));
+  return data;
+}
+function fileToBase64(file) {
+  return new Promise((res, rej) => {
+    const fr = new FileReader();
+    fr.onload = () => res(fr.result.split(',')[1]);
+    fr.onerror = rej;
+    fr.readAsDataURL(file);
+  });
+}
+function b64ToText(b64) {
+  const bin = atob(b64.replace(/\n/g, ''));
+  const bytes = Uint8Array.from(bin, c => c.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+function textToB64(text) {
+  const bytes = new TextEncoder().encode(text);
+  let bin = '';
+  bytes.forEach(b => bin += String.fromCharCode(b));
+  return btoa(bin);
+}
+
+$('uploadBtn').onclick = async () => {
+  const token = $('token').value.trim();
+  const file = $('file').files[0];
+  const category = $('category').value;
+  const title = $('title').value.trim();
+  const license = $('license').value;
+  const attr = $('attr').value.trim();
+  $('log').textContent = 'Memulai...';
+  try {
+    if (!token) throw new Error('Token belum diisi.');
+    if (!file) throw new Error('File belum dipilih.');
+    if (!title) throw new Error('Judul belum diisi.');
+    if (license.startsWith('CC BY') && !attr) throw new Error('Lisensi CC BY wajib diisi atribusinya.');
+    const folder = folderOf(category);
+    const path = folder + '/' + file.name;
+    log('Mengunggah ' + path + ' (' + file.size + ' byte)...');
+    let sha = null;
+    try { const ex = await api('/repos/' + OWNER + '/' + REPO + '/contents/' + encodeURIComponent(path).replace(/%2F/g, '/') + '?ref=' + BRANCH, 'GET', token); sha = ex.sha; } catch (e) { /* belum ada */ }
+    if (sha && !confirm('File ' + path + ' sudah ada. Timpa?')) { log('Dibatalkan.'); return; }
+    const content = await fileToBase64(file);
+    await api('/repos/' + OWNER + '/' + REPO + '/contents/' + encodeURIComponent(path).replace(/%2F/g, '/'), 'PUT', token,
+      { message: 'Tambah pustaka: ' + title, content, branch: BRANCH, ...(sha ? { sha } : {}) });
+    log('File terunggah.');
+    log('Memperbarui catalog.json...');
+    const cat = await api('/repos/' + OWNER + '/' + REPO + '/contents/catalog.json?ref=' + BRANCH, 'GET', token);
+    const catalog = JSON.parse(b64ToText(cat.content));
+    const id = slug(title) + '-' + Date.now().toString(36);
+    catalog.items.push({ id, category, title, file: path,
+      url: 'https://cdn.jsdelivr.net/gh/' + OWNER + '/' + REPO + '@' + BRANCH + '/' + folder + '/' + encodeURIComponent(file.name),
+      size: file.size, license, attribution: attr || null });
+    await api('/repos/' + OWNER + '/' + REPO + '/contents/catalog.json', 'PUT', token,
+      { message: 'Katalog: tambah ' + title, content: textToB64(JSON.stringify(catalog, null, 2)), branch: BRANCH, sha: cat.sha });
+    log('SELESAI. "' + title + '" kini ada di katalog dan akan muncul di aplikasi.');
+  } catch (e) {
+    log('GAGAL: ' + e.message);
+  }
+};
+</script>
+</body>
+</html>
